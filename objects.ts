@@ -35,4 +35,14 @@ function makeUser(param:User):User{
     return {name:'',email:'',isActive:true} 
 }
 makeUser({name:'',email:'',isActive:true})
+
+//---------------------------------------------
+
+type NewUser = {
+    readonly _id:string, // we will not be able to change it
+    name:string,
+    email:string,
+    isActive:boolean,
+    creditCardDetails?:number // '?' means option property for this object
+}
 export {}
